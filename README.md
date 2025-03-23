@@ -1,3 +1,6 @@
+![Latest Release](https://img.shields.io/github/v/release/FooqX/GoldenRatio?style=for-the-badge&logo=github)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg?style=for-the-badge)](https://choosealicense.com/licenses/gpl-3.0/)
+
 # Golden Ratio
 
 Golden Ratio is a FOSS Android calculator application, that helps you to calculate a, b, sum using the [Golden Ratio](https://en.wikipedia.org/wiki/Golden_ratio).
