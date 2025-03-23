@@ -5,9 +5,9 @@
 
 Golden Ratio is a FOSS Android calculator application, that helps you to calculate a, b, sum using the [Golden Ratio](https://en.wikipedia.org/wiki/Golden_ratio).
 
-## Installation
+## Get the app
 
-Install [Droidify](https://github.com/Droid-ify/client), or add IzzyOnDroid's repo to F-Droid, then search for this app and install it there. (PENDING)
+Install [Droidify](https://github.com/Droid-ify/client), or add IzzyOnDroid's repo to F-Droid, then search for this app and install it there.
 
 Alternatively, you could directly download the APK file from releases and update that way too.
 ## Usage
@@ -50,30 +50,6 @@ Latvian:
 
 ![screen-20250323-131056~2 (2)](https://github.com/user-attachments/assets/1a3c39bb-f799-4296-9e76-d353d35afc28)
 
-
-## How it works
-INV_PHI = 1/PHI = 0.618...
-
-
-PHI = 1.618...
-
-If you enter only Sum, then:
-```kotlin
-val a = total * INV_PHI
-val b = total - a
-```
-
-If you enter only A:
-```kotlin
-val b = a / PHI
-val total = a + b
-```
-
-If you enter only B:
-```kotlin
-val a = b * PHI
-val total = a + b
-```
 ## Contributing
 
 Pull requests are welcomed! For major changes, please open an issue to discuss what you would like to change/add/improve.
