@@ -6,6 +6,8 @@ Golden Ratio is a FOSS Android calculator application, that helps you to calcula
 
 Install [Droidify](https://github.com/Droid-ify/client), or add IzzyOnDroid's repo to F-Droid, then search for this app and install it there.
 
+**APK will be available later this day.**
+
 Alternatively, you could directly download the APK file from releases and update that way too.
 ## Usage
 This is a special calculator, not just a basic a+b calculator.
