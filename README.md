@@ -1,3 +1,4 @@
+
 ![Latest Release](https://img.shields.io/github/v/release/FooqX/GoldenRatio?style=for-the-badge&logo=github)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg?style=for-the-badge)](https://choosealicense.com/licenses/gpl-3.0/)
 
@@ -6,7 +7,7 @@
 Golden Ratio is a FOSS Android calculator application, that helps you to calculate a, b, sum using the [Golden Ratio](https://en.wikipedia.org/wiki/Golden_ratio).
 
 ## Get the app
-
+![1000024440](https://github.com/user-attachments/assets/ae8e2e36-0c42-4e9a-9c84-9e2da8393733)
 Install [Droidify](https://github.com/Droid-ify/client), or add IzzyOnDroid's repo to F-Droid, then search for this app and install it there.
 
 Alternatively, you could directly download the APK file from releases and update that way too.
