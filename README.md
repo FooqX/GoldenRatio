@@ -30,13 +30,11 @@ To clear the entered values after they have been calculated, click the "Calculat
 ## Features
 - No ads, tracking.
 - Free and open source (FOSS)
-- *Available on IzzyOnDroid* **(PENDING)**
 - Fully translated in English, Latvian.
 - Shows calculation history
 - Calculate a, b, sum easily using Golden Ratio
 - Shows which quantities were calculated using the Golden ratio in history (it's denoted by the φ symbol)
 - Simple interface
-- *Show line segment that shows a, b ratio and sum (WIP)*
 
 ## Screenshots
 English:
