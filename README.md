@@ -55,5 +55,4 @@ Please open an issue to discuss what you would like to change/add/improve.
 
 ## License
 
-[GNU General Public L![Uploading screen-20250323-131056~2.gif…]()
-icense v3.0](https://choosealicense.com/licenses/gpl-3.0/)
+[GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
