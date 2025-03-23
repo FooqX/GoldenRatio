@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "lv.RIN4X.goldenratio"
-        minSdk = 34
+        minSdk = 28
         targetSdk = 36
         versionCode = 2
         versionName = "1.0.1"
