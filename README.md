@@ -15,8 +15,8 @@ This is a special calculator, not just a basic a+b calculator.
 It calculates based on the input, and fills the blank spaces. It **can** calculate:
 
 1. **A and B** based on the sum value;
-2. **A and Result** based on B value;
-3. **B and Result** based on A value;
+2. **A and Sum** based on B value;
+3. **B and Sum** based on A value;
 
 So, that means you're only allowed to enter:
 
