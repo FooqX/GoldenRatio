@@ -76,7 +76,7 @@ val total = a + b
 ```
 ## Contributing
 
-Please open an issue to discuss what you would like to change/add/improve.
+Pull requests are welcomed! For major changes, please open an issue to discuss what you would like to change/add/improve.
 
 ## License
 
