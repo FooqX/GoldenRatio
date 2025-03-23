@@ -4,9 +4,7 @@ Golden Ratio is a FOSS Android calculator application, that helps you to calcula
 
 ## Installation
 
-Install [Droidify](https://github.com/Droid-ify/client), or add IzzyOnDroid's repo to F-Droid, then search for this app and install it there.
-
-**APK will be available later this day.**
+Install [Droidify](https://github.com/Droid-ify/client), or add IzzyOnDroid's repo to F-Droid, then search for this app and install it there. (PENDING)
 
 Alternatively, you could directly download the APK file from releases and update that way too.
 ## Usage
