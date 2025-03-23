@@ -27,7 +27,7 @@ To clear the entered values after they have been calculated, click the "Calculat
 ## Features
 - No ads, tracking.
 - Free and open source (FOSS)
-- *Available on IzzyOnDroid* **(WIP)**
+- *Available on IzzyOnDroid* **(PENDING)**
 - Fully translated in English, Latvian.
 - Shows calculation history
 - Calculate a, b, sum easily using Golden Ratio
@@ -50,6 +50,29 @@ Latvian:
 ![screen-20250323-131056~2 (2)](https://github.com/user-attachments/assets/1a3c39bb-f799-4296-9e76-d353d35afc28)
 
 
+## How it works
+INV_PHI = 1/PHI = 0.618...
+
+
+PHI = 1.618...
+
+If you enter only Sum, then:
+```kotlin
+val a = total * INV_PHI
+val b = total - a
+```
+
+If you enter only A:
+```kotlin
+val b = a / PHI
+val total = a + b
+```
+
+If you enter only B:
+```kotlin
+val a = b * PHI
+val total = a + b
+```
 ## Contributing
 
 Please open an issue to discuss what you would like to change/add/improve.
