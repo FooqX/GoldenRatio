@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zelta griezums</string>
+    <string name="length_a">Garums A:</string>
+    <string name="length_b">Garums B:</string>
+    <string name="sum">Summa:</string>
+    <string name="calculate">Aprēķināt</string>
+    <string name="show_previous_results">Rādīt vēsturi</string>
+    <string name="error_nothing_entered">Kļūda: Nekas nav ievadīts</string>
+    <string name="clear">Notīrīt</string>
+    <string name="error_a_and_result_can_t_have_values">Kļūda: Nedrīkst būt ievadīts A un SUMMA vienlaikus</string>
+    <string name="error_b_and_result_can_t_have_values">Kļūda: Nedrīkst būt ievadīts B un SUMMA vienlaikus</string>
+    <string name="error_a_and_b">Kļūda: Nedrīkst būt ievadīts A un B vienlaikus</string>
+    <string name="results_B_phi_A_given">Garums A: %1$s (dots)\nGarums B: %2$s (φ)\nSumma: %3$s</string>
+    <string name="length_a_length_b_given_sum">Garums A: %1$s (φ)\nGarums B: %2$s (dots)\nSumma: %3$s</string>
+    <string name="length_a_length_b_sum_given">Garums A: %1$s (φ)\nGarums B: %2$s\nSumma: %3$s (dots)</string>
+</resources>

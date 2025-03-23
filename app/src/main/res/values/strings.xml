@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Golden Ratio</string>
+    <string name="length_a">Length A:</string>
+    <string name="length_b">Length B:</string>
+    <string name="sum">Sum:</string>
+    <string name="calculate">Calculate</string>
+    <string name="show_previous_results">Show history</string>
+    <string name="error_nothing_entered">Error: Nothing entered</string>
+    <string name="clear">Clear</string>
+    <string name="error_a_and_result_can_t_have_values">Error: A and Result can\'t have values</string>
+    <string name="error_b_and_result_can_t_have_values">Error: B and Result can\'t have values</string>
+    <string name="error_a_and_b">Error: A and B can\'t have values</string>
+    <string name="results_B_phi_A_given">Length A: %1$s (given)\nLength B: %2$s (φ)\nSUM: %3$s</string>
+    <string name="length_a_length_b_given_sum">Length A: %1$s (φ)\nLength B: %2$s (given)\nSUM: %3$s</string>
+    <string name="length_a_length_b_sum_given">Length A: %1$s (φ)\nLength B: %2$s\nSUM: %3$s (given)</string>
+</resources>
