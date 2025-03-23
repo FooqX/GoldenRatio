@@ -1,3 +1,6 @@
+![Latest Release](https://img.shields.io/github/v/release/FooqX/GoldenRatio?style=for-the-badge&logo=github)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg?style=for-the-badge)](https://choosealicense.com/licenses/gpl-3.0/)
+
 # Golden Ratio
 
 Golden Ratio is a FOSS Android calculator application, that helps you to calculate a, b, sum using the [Golden Ratio](https://en.wikipedia.org/wiki/Golden_ratio).
@@ -12,8 +15,8 @@ This is a special calculator, not just a basic a+b calculator.
 It calculates based on the input, and fills the blank spaces. It **can** calculate:
 
 1. **A and B** based on the sum value;
-2. **A and Result** based on B value;
-3. **B and Result** based on A value;
+2. **A and Sum** based on B value;
+3. **B and Sum** based on A value;
 
 So, that means you're only allowed to enter:
 
@@ -27,13 +30,11 @@ To clear the entered values after they have been calculated, click the "Calculat
 ## Features
 - No ads, tracking.
 - Free and open source (FOSS)
-- *Available on IzzyOnDroid* **(PENDING)**
 - Fully translated in English, Latvian.
 - Shows calculation history
 - Calculate a, b, sum easily using Golden Ratio
 - Shows which quantities were calculated using the Golden ratio in history (it's denoted by the φ symbol)
 - Simple interface
-- *Show line segment that shows a, b ratio and sum (WIP)*
 
 ## Screenshots
 English:
@@ -75,7 +76,7 @@ val total = a + b
 ```
 ## Contributing
 
-Please open an issue to discuss what you would like to change/add/improve.
+Pull requests are welcomed! For major changes, please open an issue to discuss what you would like to change/add/improve.
 
 ## License
 
