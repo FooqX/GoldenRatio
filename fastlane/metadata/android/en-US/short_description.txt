@@ -1,1 +1,1 @@
-Calculate using Golden Ratio easily in your phone
+Simple calculator for aesthetic Golden ratio proportions
