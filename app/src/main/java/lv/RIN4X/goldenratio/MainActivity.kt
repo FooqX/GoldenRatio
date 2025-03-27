@@ -37,9 +37,11 @@ class MainActivity : AppCompatActivity() {
         // end
 
         btnCalculate.setOnClickListener {
+            // Get date
             val date = Calendar.getInstance().time
-            val formatter = SimpleDateFormat.getTimeInstance() //or use getDateInstance()
+            val formatter = SimpleDateFormat.getTimeInstance()
             val formatedDate = formatter.format(date)
+            // end
             if (lengthA.text.toString() == "" && lengthB.text.toString() == "" && result.text.toString() == "") {
                 // error check: A,B,Result
                 Toast.makeText(
@@ -142,15 +144,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
         clearButton.setOnClickListener {
-            container.removeAllViews()
+            container.removeAllViews() // clear all scrollview textviews
         }
     }
 }
 
 // Calculation logic using Golden Ratio
 private object GRCalculator {
-    private const val PHI: Double = 1.618033988749895 // Golden ratio
-    private const val INV_PHI: Double = 0.618033988749895 // 1 / phi
+    // Golden ratio constants
+    private const val PHI: Double = 1.618033988749895
+    private const val INV_PHI: Double = 0.618033988749895
 
     // Calculate A and B based on the total result
     fun calculateABFromResult(total: Double): Pair<Double, Double> {
@@ -173,4 +176,3 @@ private object GRCalculator {
         return Pair(total, a)
     }
 }
-
