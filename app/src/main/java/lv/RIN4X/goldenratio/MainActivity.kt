@@ -1,6 +1,7 @@
 package lv.RIN4X.goldenratio
 
 import android.annotation.SuppressLint
+import android.content.pm.ActivityInfo
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.widget.Button
@@ -16,11 +17,15 @@ import androidx.core.view.WindowInsetsCompat
 import java.text.SimpleDateFormat
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        // Locking the orientation because the app can't look good on landscape
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
