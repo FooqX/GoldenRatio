@@ -63,6 +63,9 @@ Latvian:
 
 Pull requests are welcomed! For major changes, please open an issue to discuss what you would like to change/add/improve.
 
+## Possible upcoming features
+- Displays the Golden spiral
+- Switch tabs between history and calculator
 ## License
 
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
