@@ -42,12 +42,6 @@ class MainActivity : AppCompatActivity() {
         val tvDisplayB = findViewById<TextView>(R.id.tvDisplayB)
         val tvDisplaySUM = findViewById<TextView>(R.id.tvDisplaySUM)
 
-        fun clearDisplayLine() {
-            tvDisplayA.text = "a"
-            tvDisplayB.text = "b"
-            tvDisplaySUM.text = "a + b"
-        }
-
         fun clearInputs() {
             lengthA.text.clear()
             lengthB.text.clear()
