@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        // Locking the orientation because the app can't look good on landscape
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // Components
+
         val lengthA = findViewById<EditText>(R.id.etLA)
         val lengthB = findViewById<EditText>(R.id.etLB)
         val result = findViewById<EditText>(R.id.etResult)
@@ -39,14 +38,36 @@ class MainActivity : AppCompatActivity() {
         val showPreviousResults = findViewById<CheckBox>(R.id.cbShowPrevious)
         val clearButton = findViewById<Button>(R.id.btnClear)
         val container = findViewById<LinearLayout>(R.id.linearResults)
-        // end
+        val tvDisplayA = findViewById<TextView>(R.id.tvDisplayA)
+        val tvDisplayB = findViewById<TextView>(R.id.tvDisplayB)
+        val tvDisplaySUM = findViewById<TextView>(R.id.tvDisplaySUM)
+
+        fun clearDisplayLine() {
+            tvDisplayA.text = "a"
+            tvDisplayB.text = "b"
+            tvDisplaySUM.text = "a + b"
+        }
+
+        fun clearInputs() {
+            lengthA.text.clear()
+            lengthB.text.clear()
+            result.text.clear()
+        }
+
+        fun clearALL() {
+            lengthA.text.clear()
+            lengthB.text.clear()
+            result.text.clear()
+            tvDisplayA.text = "a"
+            tvDisplayB.text = "b"
+            tvDisplaySUM.text = "a + b"
+        }
 
         btnCalculate.setOnClickListener {
-            // Get date
             val date = Calendar.getInstance().time
             val formatter = SimpleDateFormat.getTimeInstance()
             val formatedDate = formatter.format(date)
-            // end
+
             if (lengthA.text.toString() == "" && lengthB.text.toString() == "" && result.text.toString() == "") {
                 // error check: A,B,Result
                 Toast.makeText(
@@ -56,9 +77,7 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             } else if (lengthA.text.toString() != "" && lengthB.text.toString() != "" && result.text.toString() != "") {
                 // all entered/calculated, clearing
-                lengthA.text.clear()
-                lengthB.text.clear()
-                result.text.clear()
+                clearInputs()
             } else if (lengthA.text.toString() != "" && result.text.toString() != "") {
                 // error check: A, Result
                 Toast.makeText(
@@ -66,9 +85,7 @@ class MainActivity : AppCompatActivity() {
                     getString(R.string.error_a_and_result_can_t_have_values),
                     Toast.LENGTH_SHORT
                 ).show()
-                lengthA.text.clear()
-                lengthB.text.clear()
-                result.text.clear()
+                clearALL()
             } else if (lengthB.text.toString() != "" && result.text.toString() != "") {
                 // error check: B, Result
                 Toast.makeText(
@@ -76,24 +93,25 @@ class MainActivity : AppCompatActivity() {
                     getString(R.string.error_b_and_result_can_t_have_values),
                     Toast.LENGTH_SHORT
                 ).show()
-                lengthA.text.clear()
-                lengthB.text.clear()
-                result.text.clear()
+                clearALL()
             } else if (lengthB.text.toString() != "" && lengthA.text.toString() != "" && result.text.toString() == "") {
                 // error check: A,B entered
                 Toast.makeText(
                     applicationContext, getString(R.string.error_a_and_b), Toast.LENGTH_SHORT
                 ).show()
-                lengthA.text.clear()
-                lengthB.text.clear()
-                result.text.clear()
+                clearALL()
             } else if (lengthA.text.toString() != "") {
                 // calc B, Result
                 val calculationPair =
                     GRCalculator.calculateResultAndBFromA(lengthA.text.toString().toDouble())
                 result.setText("%.1f".format(calculationPair.first))
                 lengthB.setText("%.1f".format(calculationPair.second))
-                // end
+
+                // On line
+                tvDisplayA.text = "${lengthA.text}"
+                tvDisplayB.text = "${lengthB.text}"
+                tvDisplaySUM.text = "${result.text}"
+
                 if (showPreviousResults.isChecked) {
                     // Create a new TextView and add it to the container
                     val textView = TextView(this).apply {
@@ -111,6 +129,11 @@ class MainActivity : AppCompatActivity() {
                     GRCalculator.calculateResultAndAFromB(lengthB.text.toString().toDouble())
                 result.setText("%.1f".format(calculationPair.first))
                 lengthA.setText("%.1f".format(calculationPair.second))
+
+                // On line
+                tvDisplayA.text = "${lengthA.text}"
+                tvDisplayB.text = "${lengthB.text}"
+                tvDisplaySUM.text = "${result.text}"
 
                 if (showPreviousResults.isChecked) {
                     val textView = TextView(this).apply {
@@ -133,6 +156,11 @@ class MainActivity : AppCompatActivity() {
                 lengthA.setText("%.1f".format(calculationPair.first))
                 lengthB.setText("%.1f".format(calculationPair.second))
 
+                // On line
+                tvDisplayA.text = "${lengthA.text}"
+                tvDisplayB.text = "${lengthB.text}"
+                tvDisplaySUM.text = "${result.text}"
+
                 if (showPreviousResults.isChecked) {
                     val textView = TextView(this).apply {
                         text = "[$formatedDate]\n" + context.getString(
@@ -154,9 +182,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-// Calculation logic using Golden Ratio
 private object GRCalculator {
-    // Golden ratio constants
     private const val PHI: Double = 1.618033988749895
     private const val INV_PHI: Double = 0.618033988749895
 

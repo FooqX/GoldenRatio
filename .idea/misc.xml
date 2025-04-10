@@ -86,4 +86,11 @@
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1323008849557522" />
+      </ProjectState>
+    </option>
+  </component>
 </project>

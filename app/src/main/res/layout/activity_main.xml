@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="20dp"
         android:text="@string/length_b"
         android:textSize="24sp"
@@ -41,12 +41,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="8dp"
         android:text="@string/sum"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/etResult"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLengthA" />
 
@@ -54,48 +55,51 @@
         android:id="@+id/btnCalculate"
         android:layout_width="159dp"
         android:layout_height="62dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="#FFEB3B"
         android:text="@string/calculate"
         android:textColor="@color/material_dynamic_neutral0"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSum" />
+        app:layout_constraintTop_toBottomOf="@+id/etResult" />
 
     <Button
         android:id="@+id/btnClear"
         android:layout_width="128dp"
         android:layout_height="51dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="116dp"
         android:backgroundTint="#90CAF9"
         android:text="@string/clear"
         android:textColor="@color/material_dynamic_neutral0"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cbShowPrevious"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSum" />
+        app:layout_constraintTop_toBottomOf="@+id/etResult" />
 
     <CheckBox
         android:id="@+id/cbShowPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="124dp"
         android:text="@string/show_previous_results"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSum" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSum"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
         android:id="@+id/svPreviousResults"
         style="@android:style/Widget.Material.ScrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="411dp"
+        android:layout_height="202dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbShowPrevious"
@@ -113,7 +117,7 @@
         style="@android:style/Widget.EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="195dp"
         android:layout_marginBottom="14dp"
         android:ems="10"
         android:importantForAutofill="no"
@@ -145,7 +149,7 @@
         style="@android:style/Widget.EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number|numberDecimal|numberSigned"
         android:minHeight="48dp"
@@ -154,5 +158,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etLB"
         tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="17dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/etLA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/golden_ratio_linenotext" />
+
+    <TextView
+        android:id="@+id/tvDisplaySUM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a + b"
+        android:textColor="#007C00"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.849" />
+
+    <TextView
+        android:id="@+id/tvDisplayA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:text="a"
+        android:textColor="#0000FD"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.158" />
+
+    <TextView
+        android:id="@+id/tvDisplayB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="71dp"
+        android:text="b"
+        android:textColor="#FC0000"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.158" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
