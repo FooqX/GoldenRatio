@@ -4,7 +4,10 @@ import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
 import android.icu.util.Calendar
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.animation.DecelerateInterpolator
+import android.view.animation.OvershootInterpolator
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -101,13 +104,80 @@ class MainActivity : AppCompatActivity() {
                 // calc B, Result
                 val calculationPair =
                     GRCalculator.calculateResultAndBFromA(lengthA.text.toString().toDouble())
-                result.setText("%.1f".format(calculationPair.first))
-                lengthB.setText("%.1f".format(calculationPair.second))
+                val resultValue = "%.1f".format(calculationPair.first)
+                val lengthBValue = "%.1f".format(calculationPair.second)
 
-                // On line
-                tvDisplayA.text = "${lengthA.text}"
-                tvDisplayB.text = "${lengthB.text}"
-                tvDisplaySUM.text = "${result.text}"
+                // Animate result EditText
+                result.apply {
+                    alpha = 0f
+                    scaleX = 0.9f
+                    scaleY = 0.9f
+                    setText(resultValue)
+                    animate()
+                        .alpha(1f)
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(250)
+                        .setInterpolator(OvershootInterpolator(1.2f))
+                        .start()
+                }
+                // Animate lengthB EditText
+                lengthB.apply {
+                    alpha = 0f
+                    scaleX = 0.9f
+                    scaleY = 0.9f
+                    setText(lengthBValue)
+                    animate()
+                        .alpha(1f)
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(250)
+                        .setInterpolator(OvershootInterpolator(1.2f))
+                        .start()
+                }
+
+                // Animate "On line" TextViews with a slight delay for each
+                tvDisplayA.apply {
+                    alpha = 0f
+                    translationY = -20f
+                    text = "${lengthA.text}"
+                    animate()
+                        .alpha(1f)
+                        .translationY(0f)
+                        .setDuration(200)
+                        .setInterpolator(DecelerateInterpolator())
+                        .start()
+                }
+
+                // Add a small delay for cascade effect
+                Handler(Looper.getMainLooper()).postDelayed({
+                    tvDisplayB.apply {
+                        alpha = 0f
+                        translationY = -20f
+                        text = "${lengthB.text}"
+                        animate()
+                            .alpha(1f)
+                            .translationY(0f)
+                            .setDuration(200)
+                            .setInterpolator(DecelerateInterpolator())
+                            .start()
+                    }
+                }, 50)
+
+                // Add another small delay for the final element
+                Handler(Looper.getMainLooper()).postDelayed({
+                    tvDisplaySUM.apply {
+                        alpha = 0f
+                        translationY = -20f
+                        text = "${result.text}"
+                        animate()
+                            .alpha(1f)
+                            .translationY(0f)
+                            .setDuration(200)
+                            .setInterpolator(DecelerateInterpolator())
+                            .start()
+                    }
+                }, 100)
 
                 if (showPreviousResults.isChecked) {
                     // Create a new TextView and add it to the container
