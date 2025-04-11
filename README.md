@@ -55,14 +55,9 @@ Golden Ratio isn't just a basic A+B calculator; it intelligently fills in missin
 ## Screenshots
 English:
 
-
-![image](https://github.com/user-attachments/assets/c7e38c84-6114-4037-a94c-46eaa84b15b8)
-
+![image](https://github.com/user-attachments/assets/c6139d31-fcdc-4e4d-b24e-b7c213438696)
 
 Latvian:
-
-
-![image](https://github.com/user-attachments/assets/02524e7d-4c80-41aa-b8c8-94073c672204) 
 
 ![screen-20250323-131056~2 (2)](https://github.com/user-attachments/assets/1a3c39bb-f799-4296-9e76-d353d35afc28)
 
