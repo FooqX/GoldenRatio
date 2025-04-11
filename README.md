@@ -64,9 +64,10 @@ Latvian:
 Pull requests are welcomed! For major changes, please open an issue to discuss what you would like to change/add/improve.
 
 ## Possible upcoming features
-- Displays a line similar to the Wikipedia page
 - Switch tabs between history and calculator
-
+- Add option to enter cm, m, mm, etc
+- Animations
+- Colors in history
 
 ## License
 
