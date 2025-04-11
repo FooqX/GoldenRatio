@@ -4,10 +4,12 @@ import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
 import android.icu.util.Calendar
 import android.os.Bundle
+import android.view.animation.DecelerateInterpolator
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -41,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         val tvDisplayA = findViewById<TextView>(R.id.tvDisplayA)
         val tvDisplayB = findViewById<TextView>(R.id.tvDisplayB)
         val tvDisplaySUM = findViewById<TextView>(R.id.tvDisplaySUM)
+        val scrollView = findViewById<ScrollView>(R.id.svPreviousResults)
 
         fun clearInputs() {
             lengthA.text.clear()
@@ -114,8 +117,24 @@ class MainActivity : AppCompatActivity() {
                         )
                         textSize = 16f
                         setPadding(16, 8, 16, 8)
+                        // Initially set alpha to 0 (invisible)
+                        alpha = 0f
+                        // Set initial translation to appear from the right
+                        translationX = 100f
                     }
                     container.addView(textView) // Add to ScrollView's LinearLayout
+                    // Animate the TextView
+                    textView.animate()
+                        .alpha(1f)           // Fade in to fully visible
+                        .translationX(0f)    // Move to original position
+                        .setDuration(300)    // Animation duration in milliseconds
+                        .setInterpolator(DecelerateInterpolator()) // Smooth deceleration
+                        .start()
+                    // Scroll to the bottom AFTER layout is updated
+                    scrollView.post {
+                        // Scroll to the last child (most recently added)
+                        scrollView.smoothScrollTo(0, container.bottom)
+                    }
                 }
             } else if (lengthB.text.toString() != "") {
                 // calc A, result
@@ -139,9 +158,25 @@ class MainActivity : AppCompatActivity() {
                         )
                         textSize = 16f
                         setPadding(16, 8, 16, 8)
+                        // Initially set alpha to 0 (invisible)
+                        alpha = 0f
+                        // Set initial translation to appear from the right
+                        translationX = 100f
                     }
 
                     container.addView(textView) // Add to LinearLayout inside ScrollView
+                    // Animate the TextView
+                    textView.animate()
+                        .alpha(1f)           // Fade in to fully visible
+                        .translationX(0f)    // Move to original position
+                        .setDuration(300)    // Animation duration in milliseconds
+                        .setInterpolator(DecelerateInterpolator()) // Smooth deceleration
+                        .start()
+                    // Scroll to the bottom AFTER layout is updated
+                    scrollView.post {
+                        // Scroll to the last child (most recently added)
+                        scrollView.smoothScrollTo(0, container.bottom)
+                    }
                 }
             } else if (result.text.toString() != "") {
                 // calc A, B based on Result
@@ -165,8 +200,24 @@ class MainActivity : AppCompatActivity() {
                         )
                         textSize = 16f
                         setPadding(16, 8, 16, 8)
+                        // Initially set alpha to 0 (invisible)
+                        alpha = 0f
+                        // Set initial translation to appear from the right
+                        translationX = 100f
                     }
                     container.addView(textView) // Add to LinearLayout inside ScrollView
+                    // Animate the TextView
+                    textView.animate()
+                        .alpha(1f)           // Fade in to fully visible
+                        .translationX(0f)    // Move to original position
+                        .setDuration(300)    // Animation duration in milliseconds
+                        .setInterpolator(DecelerateInterpolator()) // Smooth deceleration
+                        .start()
+                    // Scroll to the bottom AFTER layout is updated
+                    scrollView.post {
+                        // Scroll to the last child (most recently added)
+                        scrollView.smoothScrollTo(0, container.bottom)
+                    }
                 }
             }
         }
