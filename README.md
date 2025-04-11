@@ -38,12 +38,19 @@ Golden Ratio isn't just a basic A+B calculator; it intelligently fills in missin
 ## Features
 - No ads, tracking
 - FOSS
-- Fully translated in English and Latvian.
+- Fully translated in English and Latvian
 - Shows calculation history
 - Calculate a, b, sum easily using *Golden Ratio*
 - Calculated values based on the *Golden Ratio* are marked with the φ symbol in history
 - Simple interface
 - Very lightweight
+- Shows line segments that display the calculated sizes (Based on Wikipedia image)
+
+#### Possible upcoming features
+- Switch tabs between history and calculator
+- Add option to enter cm, m, mm, etc
+- Animations
+- Colors in history
 
 ## Screenshots
 English:
@@ -62,12 +69,6 @@ Latvian:
 ## Contributing
 
 Pull requests are welcomed! For major changes, please open an issue to discuss what you would like to change/add/improve.
-
-## Possible upcoming features
-- Switch tabs between history and calculator
-- Add option to enter cm, m, mm, etc
-- Animations
-- Colors in history
 
 ## License
 
