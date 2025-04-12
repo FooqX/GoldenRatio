@@ -104,6 +104,7 @@ class MainActivity : AppCompatActivity() {
                 // calc B, Result
                 val calculationPair =
                     GRCalculator.calculateResultAndBFromA(lengthA.text.toString().toDouble())
+
                 val resultValue = "%.1f".format(calculationPair.first)
                 val lengthBValue = "%.1f".format(calculationPair.second)
 
@@ -210,13 +211,82 @@ class MainActivity : AppCompatActivity() {
                 // calc A, result
                 val calculationPair =
                     GRCalculator.calculateResultAndAFromB(lengthB.text.toString().toDouble())
-                result.setText("%.1f".format(calculationPair.first))
-                lengthA.setText("%.1f".format(calculationPair.second))
 
-                // On line
-                tvDisplayA.text = "${lengthA.text}"
-                tvDisplayB.text = "${lengthB.text}"
-                tvDisplaySUM.text = "${result.text}"
+                val resultValue = "%.1f".format(calculationPair.first)
+                val lengthAValue = "%.1f".format(calculationPair.second)
+
+                // Animate result EditText
+                result.apply {
+                    alpha = 0f
+                    scaleX = 0.9f
+                    scaleY = 0.9f
+                    setText(resultValue)
+                    animate()
+                        .alpha(1f)
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(250)
+                        .setInterpolator(OvershootInterpolator(1.2f))
+                        .start()
+                }
+
+                // Animate lengthA EditText
+                lengthA.apply {
+                    alpha = 0f
+                    scaleX = 0.9f
+                    scaleY = 0.9f
+                    setText(lengthAValue)
+                    animate()
+                        .alpha(1f)
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(250)
+                        .setInterpolator(OvershootInterpolator(1.2f))
+                        .start()
+                }
+
+                // Animate "On line" TextViews with a slight delay for each
+                tvDisplayA.apply {
+                    alpha = 0f
+                    translationY = -20f
+                    text = "${lengthA.text}"
+                    animate()
+                        .alpha(1f)
+                        .translationY(0f)
+                        .setDuration(200)
+                        .setInterpolator(DecelerateInterpolator())
+                        .start()
+                }
+
+                // Add a small delay for cascade effect
+                Handler(Looper.getMainLooper()).postDelayed({
+                    tvDisplayB.apply {
+                        alpha = 0f
+                        translationY = -20f
+                        text = "${lengthB.text}"
+                        animate()
+                            .alpha(1f)
+                            .translationY(0f)
+                            .setDuration(200)
+                            .setInterpolator(DecelerateInterpolator())
+                            .start()
+                    }
+                }, 50)
+
+                // Add another small delay for the final element
+                Handler(Looper.getMainLooper()).postDelayed({
+                    tvDisplaySUM.apply {
+                        alpha = 0f
+                        translationY = -20f
+                        text = "${result.text}"
+                        animate()
+                            .alpha(1f)
+                            .translationY(0f)
+                            .setDuration(200)
+                            .setInterpolator(DecelerateInterpolator())
+                            .start()
+                    }
+                }, 100)
 
                 if (showPreviousResults.isChecked) {
                     val textView = TextView(this).apply {
@@ -252,13 +322,82 @@ class MainActivity : AppCompatActivity() {
                 // calc A, B based on Result
                 val calculationPair =
                     GRCalculator.calculateABFromResult(result.text.toString().toDouble())
-                lengthA.setText("%.1f".format(calculationPair.first))
-                lengthB.setText("%.1f".format(calculationPair.second))
 
-                // On line
-                tvDisplayA.text = "${lengthA.text}"
-                tvDisplayB.text = "${lengthB.text}"
-                tvDisplaySUM.text = "${result.text}"
+                val lengthAValue = "%.1f".format(calculationPair.first)
+                val lengthBValue = "%.1f".format(calculationPair.second)
+
+                // Animate lengthA EditText
+                lengthA.apply {
+                    alpha = 0f
+                    scaleX = 0.9f
+                    scaleY = 0.9f
+                    setText(lengthAValue)
+                    animate()
+                        .alpha(1f)
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(250)
+                        .setInterpolator(OvershootInterpolator(1.2f))
+                        .start()
+                }
+
+                // Animate lengthB EditText
+                lengthB.apply {
+                    alpha = 0f
+                    scaleX = 0.9f
+                    scaleY = 0.9f
+                    setText(lengthBValue)
+                    animate()
+                        .alpha(1f)
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(250)
+                        .setInterpolator(OvershootInterpolator(1.2f))
+                        .start()
+                }
+
+                // Animate "On line" TextViews with a slight delay for each
+                tvDisplayA.apply {
+                    alpha = 0f
+                    translationY = -20f
+                    text = "${lengthA.text}"
+                    animate()
+                        .alpha(1f)
+                        .translationY(0f)
+                        .setDuration(200)
+                        .setInterpolator(DecelerateInterpolator())
+                        .start()
+                }
+
+                // Add a small delay for cascade effect
+                Handler(Looper.getMainLooper()).postDelayed({
+                    tvDisplayB.apply {
+                        alpha = 0f
+                        translationY = -20f
+                        text = "${lengthB.text}"
+                        animate()
+                            .alpha(1f)
+                            .translationY(0f)
+                            .setDuration(200)
+                            .setInterpolator(DecelerateInterpolator())
+                            .start()
+                    }
+                }, 50)
+
+                // Add another small delay for the final element
+                Handler(Looper.getMainLooper()).postDelayed({
+                    tvDisplaySUM.apply {
+                        alpha = 0f
+                        translationY = -20f
+                        text = "${result.text}"
+                        animate()
+                            .alpha(1f)
+                            .translationY(0f)
+                            .setDuration(200)
+                            .setInterpolator(DecelerateInterpolator())
+                            .start()
+                    }
+                }, 100)
 
                 if (showPreviousResults.isChecked) {
                     val textView = TextView(this).apply {
