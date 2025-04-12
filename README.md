@@ -49,7 +49,7 @@ Golden Ratio isn't just a basic A+B calculator; it intelligently fills in missin
 #### Possible upcoming features
 - Switch tabs between history and calculator
 - Add option to enter cm, m, mm, etc
-- Animations
+- ~~Animations~~
 - Colors in history
 
 ## Screenshots
@@ -60,6 +60,8 @@ English:
 Latvian:
 
 ![screen-20250323-131056~2 (2)](https://github.com/user-attachments/assets/1a3c39bb-f799-4296-9e76-d353d35afc28)
+
+outdated gif
 
 ## Contributing
 
