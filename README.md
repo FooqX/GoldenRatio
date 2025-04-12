@@ -20,7 +20,7 @@ I made this app for 3 reasons:
 ### To install this app, you can:
 - Use [**Droidify**](https://github.com/Droid-ify/client), then search for "Golden Ratio" and install it.
 - Add [**IzzyOnDroid**](https://apt.izzysoft.de/fdroid/) repository to F-Droid, then search for "Golden Ratio" and install it.
-- Download the APK file directly from the releases page. *(Not recommended)*
+- Download the APK file directly from the releases page.
 
 ## Usage
 Golden Ratio isn't just a basic A+B calculator; it intelligently fills in missing values based on the *Golden Ratio*. It can compute:
