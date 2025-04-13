@@ -196,7 +196,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="110dp"
         android:text="a"
-        android:textColor="#0000FD"
+        android:textColor="#304FFE"
         android:textSize="22sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
