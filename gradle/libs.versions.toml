@@ -1,5 +1,5 @@
 [versions]
-agp = "8.9.1"
+agp = "8.9.2"
 kotlin = "2.2.0-Beta1" # Previous: 2.1.20
 appcompat = "1.7.0"
 material = "1.12.0"
