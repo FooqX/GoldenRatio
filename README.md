@@ -5,6 +5,8 @@
 
 Golden Ratio is a free and open-source (FOSS) Android calculator designed to help you calculate proportional values based on the [Golden Ratio](https://en.wikipedia.org/wiki/Golden_ratio). Whether you're a designer, mathematician, or just curious about the ancient Greek concept of harmonic proportions, this app makes the process easy and intuitive.
 
+NOTE: For now, this repo is kind of archived. I am no longer interested in developing this program in the near future, as it already does what I need, and has the core funtionality working. However, there is still a *small* chance I might return to development.
+
 ## Why?
 I made this app for 3 reasons:
 
